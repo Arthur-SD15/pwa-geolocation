@@ -18,7 +18,7 @@ let posicaoInicial;
 const capturarLocalizacao = document.getElementById("localizacao");
 const latitude = document.getElementById("latitude");
 const longitude = document.getElementById("longitude");
-const link = document.getElementById("mapa");
+const mapa = document.getElementById("mapa");
 
 const sucesso = (posicao) => {
     posicaoInicial = posicao;
