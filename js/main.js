@@ -18,11 +18,15 @@ let posicaoInicial;
 const capturarLocalizacao = document.getElementById("localizacao");
 const latitude = document.getElementById("latitude");
 const longitude = document.getElementById("longitude");
+const link = document.getElementById("mapa");
 
 const sucesso = (posicao) => {
     posicaoInicial = posicao;
     latitude.innerHTML = posicaoInicial.coords.latitude;
     longitude.innerHTML = posicaoInicial.coords.longitude;
+
+    const coordenadasURL = `https://maps.google.com/maps?q=${posicaoInicial.coords.latitude},${posicaoInicial.coords.longitude}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
+    mapa.src = coordenadasURL;
 };
 
 const erro = (error) => {
